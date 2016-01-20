@@ -21,6 +21,17 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'slim-rails'
+gem 'inherited_resources'
+gem 'simple_form'
+gem 'kaminari'
+gem 'thin'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'kaminari'
+gem 'bootstrap3-datetimepicker-rails'
+gem 'momentjs-rails'
+gem 'paperclip'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

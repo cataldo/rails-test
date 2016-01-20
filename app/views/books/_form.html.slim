@@ -1,0 +1,18 @@
+= simple_form_for @book do |f|
+
+
+  = f.input :photo, wrapper: :append do
+    - if @book.photo.present?
+      = image_tag(@book.photo.url(:medium), width: '150px')
+    br
+    = f.input_field :photo, as: :file
+
+  = f.input :name
+  = f.input :date, as: :string, input_html: { class: 'datetimepicker', value: @book.date.try(:strftime, '%m/%d/%Y')}
+  = f.input :descr
+
+
+
+
+  .actions.text-right
+    = f.submit value: 'Сохранить', class: 'btn btn-success'

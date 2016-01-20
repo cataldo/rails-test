@@ -1,0 +1,23 @@
+p#notice = notice
+
+p
+  strong Обложка
+p = image_tag(@book.photo.url(:medium), width: '150px')
+
+p
+  strong Название
+p = @book.name
+
+p
+  strong Дата выхода
+p = @book.date.strftime('%m-%d-%Y')
+
+p
+  strong Описание
+p  = @book.descr
+
+
+
+= link_to '<- к списку', books_path
+|&nbsp;&nbsp;&nbsp;
+= link_to 'ред.', edit_book_path(@book), class: 'btn btn-success'
