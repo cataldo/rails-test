@@ -7,9 +7,9 @@
     br
     = f.input_field :photo, as: :file
 
-  = f.input :name
-  = f.input :date, as: :string, input_html: { class: 'datetimepicker', value: @book.date.try(:strftime, '%m/%d/%Y')}
-  = f.input :descr
+  = f.input :name, required: true
+  = f.input :date, required: true, as: :string, input_html: { class: 'datetimepicker', value: @book.date.try(:strftime, '%m/%d/%Y')}
+  = f.input :descr, required: true
 
 
 

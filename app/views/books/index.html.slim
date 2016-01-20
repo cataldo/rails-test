@@ -4,8 +4,6 @@ table.table
   thead
     tr
       th Обложка
-      th Название
-      th Дата выхода
       th Описание
       th
       th
@@ -14,9 +12,12 @@ table.table
     - @books.each do |book|
       tr
         td = image_tag(book.photo.url(:medium), width: '100px')
-        td = link_to book.name, book
-        td = book.date.strftime('%m-%d-%Y')
-        td = book.descr
+        td
+          = link_to book.name, book
+          br
+          = book.date.strftime('%m-%d-%Y')
+          br
+          = book.descr
         td = link_to 'Ред.', edit_book_path(book), class: 'btn btn-primary'
         td = link_to 'X', book, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
 

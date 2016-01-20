@@ -21,6 +21,6 @@
 $(function () {
 
     $('.datetimepicker').datetimepicker({
-        format : 'DD/MM/YYYY', viewMode: 'years'
+        format : 'DD/MM/YYYY', defaultDate: new Date(), viewMode: 'years'
     });
 });
